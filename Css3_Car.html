@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Browser Animation</title>
+    <style>
+        body {
+            background: url("images/backgrouond.jpg") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+        }
+        .chrome {
+            -moz-animation: wheel 5s ease-in-out infinite alternate;
+            position: absolute;
+            top: 528px;
+        }
+        .wheel2 {
+            left: 140px;
+            -moz-animation: wheel2 5s ease-in-out infinite alternate;
+            top: 448px;
+        }
+        .car {
+            position: relative;
+            position: relative;
+            width: 230px;
+            -moz-animation: car 5s ease-in-out infinite alternate;
+            -moz-transform: scale(0.25) rotate(-32deg);
+        }
+
+        @-moz-keyframes wheel {
+            0% {
+                left:515px;
+                -moz-transform:scale(0.25) rotate(0deg);
+            }
+            100% {
+                left: 1060px;
+                -moz-transform:scale(0.25) rotate(2000deg);
+                top: 175px;
+                bottom: initial;
+            }
+        }
+        @-moz-keyframes wheel2 {
+            0% {
+                left:645px;
+                -moz-transform:scale(0.25) rotate(0deg);
+            }
+            100% {
+                left: 1190px;
+                -moz-transform:scale(0.25) rotate(2000deg);
+                top: 95px;
+                bottom: initial;
+            }
+        }
+        @-moz-keyframes car {
+            0% {
+                left:444px;
+                top: 450px;
+            }
+            100% {
+                left: 990px;
+                top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chrome">
+        <img src="images/wheel.png">
+    </div>
+    <div class="chrome wheel2">
+        <img src="images/wheel.png">
+    </div>
+    <div class="car">
+        <img src="images/car.png">
+    </div>
+</body>
+</html>
